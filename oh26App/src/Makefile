@@ -218,7 +218,7 @@ endif
 
 
 ##################################################################
-ifeq ($(OS_CLASS), WIN32) 
+ifeq ($(OS_CLASS), WIN32)
   ifdef MEASCOMP
     $(DBD_NAME)_DBD += measCompSupport.dbd
     $(PROD_NAME)_LIBS := measComp $($(PROD_NAME)_LIBS)
@@ -264,7 +264,7 @@ ifeq ($(OS_CLASS), WIN32)
       $(PROD_NAME)_LIBS := LabJack LabJackM $($(PROD_NAME)_LIBS)
     endif
   endif
-    
+
   ifdef DXPSITORO
     $(DBD_NAME)_DBD += dxpSITOROSupport.dbd
     $(PROD_NAME)_LIBS := dxpSITORO handelSITORO $($(PROD_NAME)_LIBS)
@@ -272,7 +272,7 @@ ifeq ($(OS_CLASS), WIN32)
 endif
 
 ##################################################################
-ifeq ($(OS_CLASS), vxWorks) 
+ifeq ($(OS_CLASS), vxWorks)
   ifdef ALLEN_BRADLEY
     $(PROD_NAME)_LIBS := allenBradley $($(PROD_NAME)_LIBS)
   endif
@@ -364,8 +364,8 @@ ifeq ($(OS_CLASS), vxWorks)
 endif
 
 ##################################################################
-ifeq ($(OS_CLASS), Linux) 
-  
+ifeq ($(OS_CLASS), Linux)
+
 ifdef ADURL
   $(DBD_NAME)_DBD += URLDriverSupport.dbd
   $(PROD_NAME)_LIBS := URLDriver $($(PROD_NAME)_LIBS)
@@ -410,8 +410,8 @@ ifdef ADSPINNAKER
 
   PROD_LIBS += ADSpinnaker
   $(DBD_NAME)_DBD += ADSpinnakerSupport.dbd
- 
-# We use PROD_SYS_LIBS even though varios so files are in the ADSpinnaker tree 
+
+# We use PROD_SYS_LIBS even though varios so files are in the ADSpinnaker tree
 # because we are doing static build but the file is a .so file, not a .a file.
 
 PROD_SYS_LIBS_Linux += Spinnaker
@@ -438,7 +438,7 @@ ifdef ADPROSILICA
   $(PROD_NAME)_LIBS := PvAPI $($(PROD_NAME)_LIBS)
 
 
-PROD_SYS_LIBS_Linux += prosilica 
+PROD_SYS_LIBS_Linux += prosilica
 PROD_SYS_LIBS_Linux += PvAPI
 PROD_SYS_LIBS_Linux += readline
 
@@ -470,9 +470,9 @@ ifdef ADEIGER
   $(PROD_NAME)_LIBS := hdf5_hl $($(PROD_NAME)_LIBS)
 
  # PROD_SYS_LIBS  += eigerDetector
-  PROD_SYS_LIBS  += frozen 
+  PROD_SYS_LIBS  += frozen
   PROD_SYS_LIBS  += hdf5_hl hdf5
-  PROD_SYS_LIBS  += zmq 
+  PROD_SYS_LIBS  += zmq
 
 
 ifdef ZMQ_LIB
@@ -488,7 +488,7 @@ ifdef PVADRIVER
   $(DBD_NAME)_DBD += pvaDriverSupport.dbd
   $(PROD_NAME)_LIBS := pvaDriver $($(PROD_NAME)_LIBS)
 endif
-    
+
   ifdef DANTE
   ifeq (x86_64, $(ARCH_CLASS))
     $(DBD_NAME)_DBD += mcaDanteSupport.dbd
@@ -496,7 +496,7 @@ endif
     $(PROD_NAME)_SYS_LIBS += XGL_DPP
   endif
   endif
-    
+
   ifdef DXP
   ifeq (x86_64, $(ARCH_CLASS))
     # If your host supports parallel port or USB interfaces to Saturn DXP, set
@@ -504,7 +504,7 @@ endif
     ifeq ($(LINUX_USB_INSTALLED), YES)
       $(DBD_NAME)_DBD += dxpSupport.dbd
       $(PROD_NAME)_LIBS  := dxp handel $($(PROD_NAME)_LIBS)
-      $(PROD_NAME)_SYS_LIBS += usb 
+      $(PROD_NAME)_SYS_LIBS += usb
     endif
   endif
   endif
@@ -565,17 +565,17 @@ ifeq (linux-arm, $(findstring linux-arm, $(T_A)))
     $(PROD_NAME)_LIBS := softGlueZynq $($(PROD_NAME)_LIBS)
   endif
 endif
-    
+
   ifdef YOKOGAWA_DAS
     $(DBD_NAME)_DBD += mw100Support.dbd
     $(PROD_NAME)_LIBS := mw100 $($(PROD_NAME)_LIBS)
   endif
-  
+
   ifdef GALIL
     $(DBD_NAME)_DBD += GalilSupport.dbd
     $(PROD_NAME)_LIBS := GalilSupport $($(PROD_NAME)_LIBS)
   endif
-    
+
   ifdef XSPRESS3
   ifeq (x86_64, $(ARCH_CLASS))
     $(DBD_NAME)_DBD += xspress3Support.dbd
@@ -583,7 +583,7 @@ endif
     $(PROD_NAME)_SYS_LIBS += pthread rt
   endif
   endif
-    
+
   ifdef LABJACK
   ifeq (x86_64, $(ARCH_CLASS))
     $(DBD_NAME)_DBD += LabJackSupport.dbd
@@ -606,17 +606,19 @@ endif
   ifdef MOTOR
     $(DBD_NAME)_DBD += AcsMotionSupport.dbd
     $(PROD_NAME)_LIBS := AcsMotion $($(PROD_NAME)_LIBS)
+    $(DBD_NAME)_DBD += AMCISupport.dbd
+    $(PROD_NAME)_LIBS := AMCI $($(PROD_NAME)_LIBS)
   endif
 
   ifeq ($(TIRPC), YES)
     $(PROD_NAME)_SYS_LIBS += tirpc
-  endif   
+  endif
 endif
 
 $(PROD_NAME)_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
-ifeq ($(OS_CLASS), vxWorks) 
+ifeq ($(OS_CLASS), vxWorks)
   $(PROD_NAME)_SRCS  += $(DBD_NAME)_registerRecordDeviceDriver.cpp
 else
   $(PROD_NAME)_SRCS  += $(DBD_NAME)_registerRecordDeviceDriver.cpp $(PROD_NAME)Main.cpp

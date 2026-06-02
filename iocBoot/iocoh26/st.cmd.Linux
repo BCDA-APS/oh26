@@ -12,7 +12,10 @@ dbLoadDatabase("../../dbd/iocoh26Linux.dbd")
 iocoh26Linux_registerRecordDeviceDriver(pdbbase)
 
 < settings.iocsh
+< autosave.iocsh
 < common.iocsh
+
+< iocsh/motors.iocsh
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")
