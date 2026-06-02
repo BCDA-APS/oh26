@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>flexCombinedMotion</name>
+  <x>616</x>
+  <y>127</y>
+  <width>210</width>
+  <height>302</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>5</y>
+    <width>200</width>
+    <height>45</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Combined Motion $(P)$(M)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>60</y>
+    <width>180</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>100</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):setPoint</pv_name>
+      <foreground_color>
+        <color red="10" green="0" blue="184" />
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Set Point</text>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>106</y>
+    <width>176</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Upper Lim</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>96</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):upperLimit</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="153" green="255" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>129</y>
+    <width>176</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Home Pos</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>96</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):homePos</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="153" green="255" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>83</y>
+    <width>176</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Deadband</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>96</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):deadband</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="153" green="255" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>175</y>
+    <width>176</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Lower Lim</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>96</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):lowerLimit</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="153" green="255" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>267</y>
+    <width>180</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Mode</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>100</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):mode</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200" />
+      </background_color>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>244</y>
+    <width>176</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Debug</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>96</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):debug</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="153" green="255" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>13</x>
+    <y>198</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Busy</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>93</x>
+    <y>198</y>
+    <width>100</width>
+    <height>18</height>
+    <pv_name>$(P)$(M):busy</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>13</x>
+    <y>221</y>
+    <width>180</width>
+    <height>18</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>75</width>
+      <height>18</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Retries</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+      <x>80</x>
+      <y>0</y>
+      <width>100</width>
+      <height>18</height>
+      <pv_name>$(P)$(M):retries</pv_name>
+      <foreground_color>
+        <color red="10" green="0" blue="184" />
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>93</x>
+    <y>152</y>
+    <width>100</width>
+    <height>18</height>
+    <pv_name>$(P)$(M):rehome</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>13</x>
+    <y>152</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <text>Rehome</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(M):rehome</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+</display>

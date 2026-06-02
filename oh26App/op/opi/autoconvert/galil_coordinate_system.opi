@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>galil_coordinate_system</name>
+  <x>273</x>
+  <y>126</y>
+  <width>400</width>
+  <height>224</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>123</x>
+    <y>8</y>
+    <width>150</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>105</x>
+    <y>15</y>
+    <width>193</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Coordinate system</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>82</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor list</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>129</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Segments processed</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>106</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Moving</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>60</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Coordinate system</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>277</x>
+    <y>63</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)_NAME_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>277</x>
+    <y>84</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)_MOTORS_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>277</x>
+    <y>107</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)_MOVN_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>277</x>
+    <y>129</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)_SEGMENTS_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>153</x>
+    <y>193</y>
+    <width>89</width>
+    <height>20</height>
+    <pv_name>$(P)DEFER_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>151</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Stop all motors</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>174</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Go all motors</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>153</x>
+    <y>151</y>
+    <width>89</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text>Stop</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)_STOP_CMD</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)_STOP_CMD</pv_name>
+        <value>1</value>
+        <description>Release</description>
+      </action>
+    </actions>
+    <toggle_button>true</toggle_button>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>153</x>
+    <y>172</y>
+    <width>89</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text>Go</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)_GO_CMD</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)_GO_CMD</pv_name>
+        <value>1</value>
+        <description>Release</description>
+      </action>
+    </actions>
+    <toggle_button>true</toggle_button>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>23</x>
+    <y>197</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Defer moves</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>277</x>
+    <y>197</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(P)DEFER_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+</display>

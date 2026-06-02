@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>galil_rio_ctrl</name>
+  <x>258</x>
+  <y>131</y>
+  <width>410</width>
+  <height>258</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>124</x>
+    <y>8</y>
+    <width>150</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>105</x>
+    <y>15</y>
+    <width>193</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>RIO controller</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>71</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller address</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>71</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(RIO)ADDRESS_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>52</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller model</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>52</y>
+    <width>120</width>
+    <height>13</height>
+    <pv_name>$(RIO)MODEL_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>5</x>
+    <y>135</y>
+    <width>399</width>
+    <height>119</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>4</x>
+      <y>0</y>
+      <width>65</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Analog/Digital IO</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+      <x>145</x>
+      <y>1</y>
+      <width>15</width>
+      <height>15</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <text />
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>galil_ctrl_io.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="$(R)" />
+          </macros>
+          <mode>1</mode>
+          <description>Controller IO</description>
+        </action>
+      </actions>
+      <action_index>0</action_index>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+      <x>0</x>
+      <y>38</y>
+      <width>399</width>
+      <height>81</height>
+      <transparent>true</transparent>
+      <show_scrollbar>false</show_scrollbar>
+      <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+        <x>27</x>
+        <y>16</y>
+        <width>372</width>
+        <height>13</height>
+        <pv_name>$(RIO)ERROR_MON</pv_name>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="212" green="219" blue="157" />
+        </background_color>
+        <show_units>false</show_units>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+        <x>0</x>
+        <y>31</y>
+        <width>65</width>
+        <height>13</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <transparent>true</transparent>
+        <text>Command console</text>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+        <x>27</x>
+        <y>48</y>
+        <width>372</width>
+        <height>20</height>
+        <pv_name>$(RIO)SEND_STR_CMD</pv_name>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="115" green="223" blue="255" />
+        </background_color>
+        <show_units>false</show_units>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+        <x>27</x>
+        <y>68</y>
+        <width>372</width>
+        <height>13</height>
+        <pv_name>$(RIO)SEND_STR_MON</pv_name>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <background_color>
+          <color red="212" green="219" blue="157" />
+        </background_color>
+        <show_units>false</show_units>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+        <x>0</x>
+        <y>50</y>
+        <width>65</width>
+        <height>13</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <transparent>true</transparent>
+        <text>Cmd</text>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+        <x>0</x>
+        <y>67</y>
+        <width>65</width>
+        <height>13</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <transparent>true</transparent>
+        <text>Resp</text>
+      </widget>
+      <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+        <x>0</x>
+        <y>0</y>
+        <width>65</width>
+        <height>13</height>
+        <foreground_color>
+          <color red="0" green="0" blue="0" />
+        </foreground_color>
+        <transparent>true</transparent>
+        <text>Controller mesg</text>
+      </widget>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>4</x>
+      <y>20</y>
+      <width>65</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>User array</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+      <x>145</x>
+      <y>21</y>
+      <width>15</width>
+      <height>15</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <label />
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="0" />
+            <macro name="Y" value="$(RIO)UARRAY0_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array0</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="1" />
+            <macro name="Y" value="$(RIO)UARRAY1_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array1</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="2" />
+            <macro name="Y" value="$(RIO)UARRAY2_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array2</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="3" />
+            <macro name="Y" value="$(RIO)UARRAY3_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array3</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="4" />
+            <macro name="Y" value="$(RIO)UARRAY4_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array4</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="5" />
+            <macro name="Y" value="$(RIO)UARRAY5_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array5</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="6" />
+            <macro name="Y" value="$(RIO)UARRAY6_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array6</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(RIO)" />
+            <macro name="R" value="7" />
+            <macro name="Y" value="$(RIO)UARRAY7_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array7</description>
+        </action>
+      </actions>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>9</x>
+    <y>91</y>
+    <width>372</width>
+    <height>13</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>97</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Communication Status</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+      <x>277</x>
+      <y>0</y>
+      <width>95</width>
+      <height>13</height>
+      <pv_name>$(RIO)COMMERR_STATUS</pv_name>
+      <foreground_color>
+        <color red="10" green="0" blue="184" />
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>110</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller start status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>110</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(RIO)START_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+</display>

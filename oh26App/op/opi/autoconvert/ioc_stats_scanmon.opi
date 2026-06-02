@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>ioc_stats_scanmon</name>
+  <x>477</x>
+  <y>485</y>
+  <width>580</width>
+  <height>276</height>
+  <background_color>
+    <color red="200" green="200" blue="200" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>5</y>
+    <width>211</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>IOC Diagnostics ScanMon</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>296</x>
+    <y>5</y>
+    <width>212</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>$(ioc):</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>0</x>
+    <y>47</y>
+    <width>581</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>108</y>
+    <width>147</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>10 Hz Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>130</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>5 Hz  Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>152</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>2 Hz  Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>174</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>1 Hz  Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>196</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>.5 Hz Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>218</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>.2 Hz Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>240</y>
+    <width>110</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>.1 Hz Thread Scan</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>108</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):10HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>106</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):10HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>105</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):10HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>105</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):10HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>129</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):5HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>127</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):5HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>126</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):5HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>126</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):5HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>166</x>
+    <y>151</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):2HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>271</x>
+    <y>149</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):2HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>403</x>
+    <y>148</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):2HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>486</x>
+    <y>148</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):2HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>174</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):1HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>172</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):1HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>171</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):1HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>171</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):1HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>195</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):05HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>193</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):05HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>192</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):05HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>192</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):05HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>217</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):02HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>215</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):02HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>214</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):02HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>214</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):02HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>239</y>
+    <width>100</width>
+    <height>15</height>
+    <pv_name>$(ioc):01HZ_UPD_TIME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="120" green="120" blue="120" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>270</x>
+    <y>237</y>
+    <width>128</width>
+    <height>18</height>
+    <pv_name>$(ioc):01HZ_MODE</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>402</x>
+    <y>236</y>
+    <width>79</width>
+    <height>20</height>
+    <pv_name>$(ioc):01HZ_UPD_TIME.B</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>485</x>
+    <y>236</y>
+    <width>77</width>
+    <height>19</height>
+    <pv_name>$(ioc):01HZ_UPD_TIME.C</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="145" green="145" blue="145" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>164</x>
+    <y>78</y>
+    <width>105</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Time (sec)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>282</x>
+    <y>77</y>
+    <width>105</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Scan Mode</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>424</x>
+    <y>55</y>
+    <width>105</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Tolerance (%)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>414</x>
+    <y>77</y>
+    <width>50</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Minor</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>496</x>
+    <y>76</y>
+    <width>50</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Major</text>
+  </widget>
+</display>

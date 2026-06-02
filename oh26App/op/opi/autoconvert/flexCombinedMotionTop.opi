@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>flexCombinedMotionTop</name>
+  <x>273</x>
+  <y>398</y>
+  <width>200</width>
+  <height>130</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>25</x>
+    <y>85</y>
+    <width>150</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="40" green="147" blue="21" />
+    </background_color>
+    <label>Menu</label>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motor3x.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="M1" value="$(M)" />
+          <macro name="M2" value="$(CM)" />
+          <macro name="M3" value="$(FM)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motors</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>flexCombinedMotion.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="M" value="$(M)" />
+        </macros>
+        <mode>1</mode>
+        <description>Combined Motion</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>flexCapSensor.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="C" value="$(C)" />
+        </macros>
+        <mode>1</mode>
+        <description>Cap Sensor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>10</y>
+    <width>180</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Combined Motion</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>45</y>
+    <width>180</width>
+    <height>25</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>$(P)$(M)</text>
+  </widget>
+</display>

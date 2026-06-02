@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>gm10_main</name>
+  <x>423</x>
+  <y>74</y>
+  <width>290</width>
+  <height>350</height>
+  <background_color>
+    <color red="200" green="200" blue="200" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>27</x>
+    <y>5</y>
+    <width>250</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Yokogawa GM10 $(P)$(DAU)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>5</x>
+    <y>318</y>
+    <width>281</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>323</y>
+    <width>150</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="222" green="19" blue="9" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Error Message</text>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):ErrorFlag</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>220</x>
+    <y>323</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text>System</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_system.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+        </macros>
+        <mode>1</mode>
+        <description>System</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>-50</x>
+    <y>30</y>
+    <width>399</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>145</x>
+    <y>120</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <label> Constants</label>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="01" />
+        </macros>
+        <mode>1</mode>
+        <description>Constants K001-K010</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="02" />
+        </macros>
+        <mode>1</mode>
+        <description>Constants K011-K020</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="02" />
+          <macro name="DN" value="03" />
+        </macros>
+        <mode>1</mode>
+        <description>Constants K021-K030</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="03" />
+          <macro name="DN" value="04" />
+        </macros>
+        <mode>1</mode>
+        <description>Constants K031-K040</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="04" />
+          <macro name="DN" value="05" />
+        </macros>
+        <mode>1</mode>
+        <description>Constants K041-K050</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>55</x>
+    <y>288</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Alarm</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>130</x>
+    <y>288</y>
+    <width>100</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="238" green="182" blue="43" />
+    </background_color>
+    <text>Acknowledge</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):AlarmAck.PROC</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>5</x>
+    <y>278</y>
+    <width>281</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>20</x>
+    <y>288</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>145</x>
+    <y>60</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text> Digital Outputs</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gx90wd-0806-outputs.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="M" value="2" />
+        </macros>
+        <mode>1</mode>
+        <description />
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>145</x>
+    <y>40</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text> Digital Inputs</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gx90wd-0806-inputs.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="M" value="2" />
+        </macros>
+        <mode>1</mode>
+        <description />
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>5</x>
+    <y>90</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <label> Communication</label>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_comm-input_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="00" />
+          <macro name="DN" value="01" />
+        </macros>
+        <mode>1</mode>
+        <description>Comm Input C001-C010</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_comm-input_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="02" />
+        </macros>
+        <mode>1</mode>
+        <description>Comm Input C011-C020</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_comm-input_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="02" />
+          <macro name="DN" value="03" />
+        </macros>
+        <mode>1</mode>
+        <description>Comm Input C021-C030</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_comm-input_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="03" />
+          <macro name="DN" value="04" />
+        </macros>
+        <mode>1</mode>
+        <description>Comm Input C031-C040</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_comm-input_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="04" />
+          <macro name="DN" value="05" />
+        </macros>
+        <mode>1</mode>
+        <description>Comm Input C041-C050</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>5</x>
+    <y>60</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text> Analog Outputs</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gx90ya-04.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="M" value="1" />
+        </macros>
+        <mode>1</mode>
+        <description>DAC 011-020</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>5</x>
+    <y>40</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text> Analog Inputs</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gx90xa-10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="M" value="0" />
+        </macros>
+        <mode>1</mode>
+        <description>0001-0010</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>5</x>
+    <y>120</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <label> Calculations</label>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="00" />
+          <macro name="DN" value="01" />
+        </macros>
+        <mode>1</mode>
+        <description>A001-A010</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="02" />
+        </macros>
+        <mode>1</mode>
+        <description>A011-A020</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="02" />
+          <macro name="DN" value="03" />
+        </macros>
+        <mode>1</mode>
+        <description>A021-A030</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="03" />
+          <macro name="DN" value="04" />
+        </macros>
+        <mode>1</mode>
+        <description>A031-A040</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="04" />
+          <macro name="DN" value="05" />
+        </macros>
+        <mode>1</mode>
+        <description>A041-A050</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>150</y>
+    <width>150</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Settings Status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>150</y>
+    <width>100</width>
+    <height>16</height>
+    <pv_name>$(P)$(DAU):Settings</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>145</x>
+    <y>90</y>
+    <width>140</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <label> Variable Consts</label>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_variable_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="01" />
+        </macros>
+        <mode>1</mode>
+        <description>Variable Constants W001-W010</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_variable_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="01" />
+          <macro name="DN" value="02" />
+        </macros>
+        <mode>1</mode>
+        <description>Variable Constants W011-W020</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_variable_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="02" />
+          <macro name="DN" value="03" />
+        </macros>
+        <mode>1</mode>
+        <description>Variable Constants W021-W030</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_variable_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="03" />
+          <macro name="DN" value="04" />
+        </macros>
+        <mode>1</mode>
+        <description>Variable Constants W031-W040</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>gm10_variable_constant.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="04" />
+          <macro name="DN" value="05" />
+        </macros>
+        <mode>1</mode>
+        <description>Variable Constants W041-W050</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>10</x>
+    <y>230</y>
+    <width>150</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Recording</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>165</x>
+    <y>230</y>
+    <width>100</width>
+    <height>16</height>
+    <pv_name>$(P)$(DAU):Recording</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>205</x>
+    <y>250</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Stop</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):RecordingSet</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>140</x>
+    <y>250</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Start</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):RecordingSet</pv_name>
+        <value>0</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>34</x>
+    <y>175</y>
+    <width>120</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Computation</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>164</x>
+    <y>180</y>
+    <width>100</width>
+    <height>16</height>
+    <pv_name>$(P)$(DAU):Computation</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>20</x>
+    <y>201</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Stop</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):ComputationSet</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>85</x>
+    <y>201</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Start</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):ComputationSet</pv_name>
+        <value>0</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>150</x>
+    <y>201</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Reset</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):ComputationSet</pv_name>
+        <value>2</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>215</x>
+    <y>201</y>
+    <width>60</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <text>Clear</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(DAU):ComputationSet</pv_name>
+        <value>3</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+</display>

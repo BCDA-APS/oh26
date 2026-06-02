@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>gx90wd-0806-outputs_label</name>
+  <x>435</x>
+  <y>838</y>
+  <width>600</width>
+  <height>200</height>
+  <background_color>
+    <color red="200" green="200" blue="200" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>55</x>
+    <y>0</y>
+    <width>340</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>$(P)$(DAU) GX90WD-0806</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>0</x>
+    <y>25</y>
+    <width>599</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>560</x>
+    <y>0</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text>Less</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gx90wd-0806-outputs.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="M" value="$(M)" />
+        </macros>
+        <mode>0</mode>
+        <description />
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>482</x>
+    <y>30</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>State</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>175</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)14</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>150</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)13</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>125</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)12</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>100</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)11</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>75</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)10</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>307</x>
+    <y>30</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Value</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>292</x>
+    <y>50</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)09</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>167</x>
+    <y>30</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>50</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)09:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>75</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)10:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>100</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)11:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>125</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)12:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>150</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)13:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>162</x>
+    <y>175</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)14:ChStatus</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>232</x>
+    <y>30</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Mode</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>50</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)09:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>75</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)10:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>100</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)11:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>125</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)12:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>150</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)13:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>227</x>
+    <y>175</y>
+    <width>60</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)14:Mode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>50</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)09</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>75</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)10</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>100</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)11</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>125</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)12</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>150</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)13</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>377</x>
+    <y>175</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>0$(M)14</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>390</x>
+    <y>5</y>
+    <width>150</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Digital Outputs</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>50</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)09:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>59</x>
+    <y>30</y>
+    <width>50</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Label</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>75</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)10:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>100</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)11:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>125</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)12:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>150</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)13:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>5</x>
+    <y>175</y>
+    <width>150</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)14:Label</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="236" green="236" blue="236" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>50</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)09:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>75</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)10:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>100</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)11:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>125</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)12:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>150</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)13:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>422</x>
+    <y>175</y>
+    <width>170</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):0$(M)14:Set</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="235" green="241" blue="181" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+</display>

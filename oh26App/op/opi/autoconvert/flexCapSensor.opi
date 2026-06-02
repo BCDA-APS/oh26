@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>flexCapSensor</name>
+  <x>643</x>
+  <y>151</y>
+  <width>210</width>
+  <height>210</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>5</y>
+    <width>200</width>
+    <height>45</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Cap Sensor $(P)$(C)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>107</x>
+    <y>160</y>
+    <width>80</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="40" green="147" blue="21" />
+    </background_color>
+    <text>Pos Calc</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>yyCalcoutRecord.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="C" value="$(C):posCalc" />
+        </macros>
+        <mode>1</mode>
+        <description>Position Calc</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>11</x>
+    <y>160</y>
+    <width>80</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="42" green="99" blue="228" />
+    </background_color>
+    <text>Zero Pos</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(C):zero.PROC</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>93</x>
+    <y>57</y>
+    <width>100</width>
+    <height>18</height>
+    <pv_name>$(P)$(C):pos</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>13</x>
+    <y>57</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Position</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>93</x>
+    <y>80</y>
+    <width>100</width>
+    <height>18</height>
+    <pv_name>$(P)$(C):voltage</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>13</x>
+    <y>80</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Voltage</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>93</x>
+    <y>103</y>
+    <width>100</width>
+    <height>18</height>
+    <pv_name>$(P)$(C):umPerV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>13</x>
+    <y>103</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>um per V</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>13</x>
+    <y>126</y>
+    <width>75</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Offset</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>93</x>
+    <y>126</y>
+    <width>96</width>
+    <height>18</height>
+    <pv_name>$(P)$(C):offset</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+</display>

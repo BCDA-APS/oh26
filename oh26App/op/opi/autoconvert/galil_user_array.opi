@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>galil_user_array</name>
+  <x>278</x>
+  <y>123</y>
+  <width>569</width>
+  <height>400</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>10</x>
+    <y>29</y>
+    <width>550</width>
+    <height>310</height>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>186</x>
+    <y>11</y>
+    <width>200</width>
+    <height>17</height>
+    <pv_name>$(P)UARRAY$(R)_MON.NAME</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>3</x>
+    <y>3</y>
+    <width>560</width>
+    <height>360</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>12</x>
+    <y>367</y>
+    <width>173</width>
+    <height>20</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>80</width>
+      <height>20</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <text>Upload</text>
+      <actions hook="false" hook_all="false">
+        <action type="WRITE_PV">
+          <pv_name>$(P)UPLOAD_CMD</pv_name>
+          <value>Upload</value>
+          <description>Press</description>
+        </action>
+        <action type="WRITE_PV">
+          <pv_name>$(P)UPLOAD_CMD</pv_name>
+          <value>Upload</value>
+          <description>Release</description>
+        </action>
+      </actions>
+      <toggle_button>true</toggle_button>
+      <action_index>0</action_index>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+      <x>87</x>
+      <y>4</y>
+      <width>86</width>
+      <height>13</height>
+      <pv_name>$(P)UPLOAD_STATUS</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>14</x>
+    <y>339</y>
+    <width>202</width>
+    <height>20</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+      <x>81</x>
+      <y>0</y>
+      <width>121</width>
+      <height>20</height>
+      <pv_name>$(P)UARRAYNAME$(R)_SP</pv_name>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <show_units>false</show_units>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>3</y>
+      <width>80</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Array name:</text>
+    </widget>
+  </widget>
+</display>

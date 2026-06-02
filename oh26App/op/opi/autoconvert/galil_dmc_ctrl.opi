@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>galil_dmc_ctrl</name>
+  <x>899</x>
+  <y>232</y>
+  <width>410</width>
+  <height>658</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>124</x>
+    <y>8</y>
+    <width>150</width>
+    <height>28</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>105</x>
+    <y>15</y>
+    <width>193</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>DMC controller</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>71</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller address</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>71</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(DMC)ADDRESS_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>91</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Communication Status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>91</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(DMC)COMMERR_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>52</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller model</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>52</y>
+    <width>120</width>
+    <height>13</height>
+    <pv_name>$(DMC)MODEL_MON</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>166</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Limit switch type</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>149</x>
+    <y>164</y>
+    <width>120</width>
+    <height>18</height>
+    <pv_name>$(DMC)LIMITTYPE_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>167</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(DMC)LIMITTYPE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>185</y>
+    <width>69</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Home switch type</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>149</x>
+    <y>182</y>
+    <width>120</width>
+    <height>18</height>
+    <pv_name>$(DMC)HOMETYPE_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>186</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(DMC)HOMETYPE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>204</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Defer moves</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>149</x>
+    <y>200</y>
+    <width>120</width>
+    <height>18</height>
+    <pv_name>$(DMC)DEFER_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>203</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(DMC)DEFER_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>222</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Deferred mode</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>149</x>
+    <y>218</y>
+    <width>120</width>
+    <height>20</height>
+    <pv_name>$(DMC)DEFER_MODE_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>241</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(DMC)COORDSYS_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ChoiceButton" version="1.0.0">
+    <x>149</x>
+    <y>237</y>
+    <width>120</width>
+    <height>18</height>
+    <pv_name>$(DMC)COORDSYS_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <horizontal>true</horizontal>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>240</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Coordinate system</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>287</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Analog/Digital IO</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>150</x>
+    <y>288</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_ctrl_io.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="R" value="$(R)" />
+        </macros>
+        <mode>1</mode>
+        <description>Controller IO</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>222</y>
+    <width>120</width>
+    <height>13</height>
+    <pv_name>$(DMC)DEFER_MODE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>128</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(DMC)SSICAPABLE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>128</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>SSI Capable</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>147</y>
+    <width>81</width>
+    <height>13</height>
+    <pv_name>$(DMC)PVTCAPABLE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>147</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>PVT Capable</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>332</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Scan records</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>333</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>scan.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(IOC)" />
+          <macro name="N" value="1" />
+          <macro name="S" value="scan1" />
+        </macros>
+        <mode>1</mode>
+        <description>Scan1 (for all scans)</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>scan.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(IOC)" />
+          <macro name="N" value="2" />
+          <macro name="S" value="scan2" />
+        </macros>
+        <mode>1</mode>
+        <description>Scan2 (for 2D &amp; higher scans)</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>scan.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(IOC)" />
+          <macro name="N" value="3" />
+          <macro name="S" value="scan3" />
+        </macros>
+        <mode>1</mode>
+        <description>Scan3 (for 3D &amp; higher scans)</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>scan.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(IOC)" />
+          <macro name="N" value="4" />
+          <macro name="S" value="scan4" />
+        </macros>
+        <mode>1</mode>
+        <description>Scan4 (for 4D scans)</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>scan.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(IOC)" />
+          <macro name="N" value="H" />
+          <macro name="S" value="scanH" />
+        </macros>
+        <mode>1</mode>
+        <description>ScanH (for Hardware-assisted scans)</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>11</x>
+    <y>585</y>
+    <width>395</width>
+    <height>13</height>
+    <pv_name>$(DMC)ERROR_MON</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="212" green="219" blue="157" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>600</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Command console</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>32</x>
+    <y>617</y>
+    <width>372</width>
+    <height>20</height>
+    <pv_name>$(DMC)SEND_STR_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>32</x>
+    <y>637</y>
+    <width>372</width>
+    <height>13</height>
+    <pv_name>$(DMC)SEND_STR_MON</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="212" green="219" blue="157" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>619</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Cmd</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>636</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Resp</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>569</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller mesg</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>351</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Real motors</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>351</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>CS motors</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>376</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M9)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor I</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M9)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor I kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>375</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor A</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>376</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M1)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor A Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M1)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor A SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M1)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor A Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M1)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor A Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>397</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor B</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>398</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M2)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor B Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M2)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor B SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M2)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor B Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M2)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor B Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>420</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M3)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor C Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M3)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor C SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M3)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor C Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M3)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor C Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>419</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor C</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>441</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor D</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>442</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M4)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor D Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M4)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor D SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M4)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor D Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M4)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor D Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>462</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor E</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>463</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M5)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor E Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M5)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor E SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M5)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor E Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M5)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor E Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>485</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M6)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor F Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M6)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor F SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M6)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor F Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M6)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor F Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>484</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor F</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>506</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor G</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>507</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M7)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor G Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M7)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor G SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M7)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor G Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M7)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor G Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>150</x>
+    <y>529</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_motor_extras.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M8)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor H Extras</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_SSI.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M8)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor H SSI</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_amp.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M8)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor H Amp</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M8)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor H Motor</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>528</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor H</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>375</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor I</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>397</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor J</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>419</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor K</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>441</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor L</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>462</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor M</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>484</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor N</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>506</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor O</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>528</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Motor P</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>398</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M10)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor J</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M10)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor J kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>420</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M11)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor K</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M11)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor K kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>442</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M12)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor L</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M12)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor L kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>462</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M13)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor M</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M13)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor M kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>484</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M14)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor N</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M14)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor N kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>507</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M15)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor O</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M15)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor O kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>330</x>
+    <y>529</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>motorx_all.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor P</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>galil_csmotor_kinematics.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="M" value="$(M16)" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+          <macro name="M9" value="$(M9)" />
+          <macro name="M10" value="$(M10)" />
+          <macro name="M11" value="$(M11)" />
+          <macro name="M12" value="$(M12)" />
+          <macro name="M13" value="$(M13)" />
+          <macro name="M14" value="$(M14)" />
+          <macro name="M15" value="$(M15)" />
+          <macro name="M16" value="$(M16)" />
+        </macros>
+        <mode>1</mode>
+        <description>Motor P kinematics</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>56</x>
+    <y>550</y>
+    <width>75</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Profile move</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>228</x>
+    <y>551</y>
+    <width>65</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Profile move</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>150</x>
+    <y>550</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_profileMove.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="TITLE" value="Galil profile" />
+          <macro name="R" value="Prof1:" />
+          <macro name="M1" value="A" />
+          <macro name="M2" value="B" />
+          <macro name="M3" value="C" />
+          <macro name="M4" value="D" />
+          <macro name="M5" value="E" />
+          <macro name="M6" value="F" />
+          <macro name="M7" value="G" />
+          <macro name="M8" value="H" />
+        </macros>
+        <mode>1</mode>
+        <description>Profile 1</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>330</x>
+    <y>551</y>
+    <width>15</width>
+    <height>15</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_CSprofileMove.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(DMC)" />
+          <macro name="TITLE" value="Galil CS profile" />
+          <macro name="R" value="Prof1:" />
+          <macro name="M9" value="I" />
+          <macro name="M10" value="J" />
+          <macro name="M11" value="K" />
+          <macro name="M12" value="L" />
+          <macro name="M13" value="M" />
+          <macro name="M14" value="N" />
+          <macro name="M15" value="O" />
+          <macro name="M16" value="P" />
+        </macros>
+        <mode>1</mode>
+        <description>Profile 1</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>9</x>
+    <y>264</y>
+    <width>156</width>
+    <height>16</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>65</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>Coordinate systems</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+      <x>141</x>
+      <y>1</y>
+      <width>15</width>
+      <height>15</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <label />
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>galil_coordinate_system.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="S" />
+          </macros>
+          <mode>1</mode>
+          <description>Coordinate system S</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_coordinate_system.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="T" />
+          </macros>
+          <mode>1</mode>
+          <description>Coordinate system T</description>
+        </action>
+      </actions>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>9</x>
+    <y>309</y>
+    <width>156</width>
+    <height>16</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>65</width>
+      <height>13</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <transparent>true</transparent>
+      <text>User array</text>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+      <x>141</x>
+      <y>1</y>
+      <width>15</width>
+      <height>15</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <background_color>
+        <color red="115" green="223" blue="255" />
+      </background_color>
+      <label />
+      <actions hook="false" hook_all="false">
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="0" />
+            <macro name="Y" value="$(DMC)UARRAY0_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array0</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="1" />
+            <macro name="Y" value="$(DMC)UARRAY1_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array1</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="2" />
+            <macro name="Y" value="$(DMC)UARRAY2_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array2</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="3" />
+            <macro name="Y" value="$(DMC)UARRAY3_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array3</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="4" />
+            <macro name="Y" value="$(DMC)UARRAY4_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array4</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="5" />
+            <macro name="Y" value="$(DMC)UARRAY5_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array5</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="6" />
+            <macro name="Y" value="$(DMC)UARRAY6_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array6</description>
+        </action>
+        <action type="OPEN_DISPLAY">
+          <path>galil_user_array.opi</path>
+          <macros>
+            <include_parent_macros>true</include_parent_macros>
+            <macro name="P" value="$(DMC)" />
+            <macro name="R" value="7" />
+            <macro name="Y" value="$(DMC)UARRAY7_MON" />
+          </macros>
+          <mode>1</mode>
+          <description>User array7</description>
+        </action>
+      </actions>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>9</x>
+    <y>110</y>
+    <width>97</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Controller start status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>286</x>
+    <y>109</y>
+    <width>95</width>
+    <height>13</height>
+    <pv_name>$(DMC)START_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+</display>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>MP4U_UnitIO</name>
+  <x>132</x>
+  <y>872</y>
+  <width>1260</width>
+  <height>105</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>5</x>
+    <y>5</y>
+    <width>207</width>
+    <height>95</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>207</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxBi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bi$(U):17" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>25</y>
+      <width>207</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxBi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bi$(U):18" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>50</y>
+      <width>207</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxBi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bi$(U):19" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>75</y>
+      <width>207</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxBi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bi$(U):20" />
+      </macros>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>222</x>
+    <y>20</y>
+    <width>252</width>
+    <height>65</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>252</width>
+      <height>30</height>
+      <opi_file>SPiiPlusAuxBo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bo$(U):8" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>35</y>
+      <width>252</width>
+      <height>30</height>
+      <opi_file>SPiiPlusAuxBo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="bo$(U):9" />
+      </macros>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>484</x>
+    <y>5</y>
+    <width>380</width>
+    <height>95</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ai$(A1)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>25</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ai$(A2)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>50</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ai$(A3)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>75</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAi.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ai$(A4)" />
+      </macros>
+    </widget>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
+    <x>874</x>
+    <y>5</y>
+    <width>380</width>
+    <height>95</height>
+    <transparent>true</transparent>
+    <show_scrollbar>false</show_scrollbar>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>0</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ao$(A1)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>25</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ao$(A2)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>50</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ao$(A3)" />
+      </macros>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+      <x>0</x>
+      <y>75</y>
+      <width>380</width>
+      <height>20</height>
+      <opi_file>SPiiPlusAuxAo.opi</opi_file>
+      <resize_behaviour>1</resize_behaviour>
+      <border_style>0</border_style>
+      <macros>
+        <include_parent_macros>true</include_parent_macros>
+        <macro name="P" value="$(P)" />
+        <macro name="C" value="$(C)" />
+        <macro name="R" value="ao$(A4)" />
+      </macros>
+    </widget>
+  </widget>
+</display>

@@ -1,0 +1,5 @@
+LabJackConfig("LJ-T701", "10.54.xxx.xxx", 2048, 2048)
+LabJackConfig("LJ-T7C2", "10.54.xxx.xxx", 2048, 2048)
+
+dbLoadTemplate("substitutions/LabJack.substitutions", "P=$(PREFIX)LJT701:, PORT=LJ-T701, WDIG_POINTS=2048, WGEN_POINTS=2048")
+dbLoadTemplate("substitutions/LabJack_Relays.substitutions", "P=$(PREFIX)LJT7C2:, PORT=LJ-T7C2, WDIG_POINTS=2048, WGEN_POINTS=2048")

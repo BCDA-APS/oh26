@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>galil_profileMove</name>
+  <x>496</x>
+  <y>87</y>
+  <width>530</width>
+  <height>701</height>
+  <background_color>
+    <color red="187" green="187" blue="187" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>73</x>
+    <y>10</y>
+    <width>384</width>
+    <height>30</height>
+    <foreground_color>
+      <color red="212" green="219" blue="157" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="212" green="219" blue="157" />
+    </line_color>
+    <line_width>1</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>103</x>
+    <y>16</y>
+    <width>324</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>$(TITLE)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>5</x>
+    <y>45</y>
+    <width>524</width>
+    <height>210</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>211</y>
+    <width>200</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Trajectory file:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>192</y>
+    <width>90</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Start position:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>174</y>
+    <width>180</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Output compare 2 Axis:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>154</y>
+    <width>90</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Start position:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>136</y>
+    <width>180</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Output compare 1 Axis:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>114</y>
+    <width>200</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Fixed time per point</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>93</y>
+    <width>90</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Time mode</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>158</x>
+    <y>209</y>
+    <width>331</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)TrajectoryFile</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>414</x>
+    <y>89</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text>More</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>galil_profileMove_more.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="R" value="$(R)" />
+          <macro name="TITLE" value="Details" />
+          <macro name="M1" value="$(M1)" />
+          <macro name="M2" value="$(M2)" />
+          <macro name="M3" value="$(M3)" />
+          <macro name="M4" value="$(M4)" />
+          <macro name="M5" value="$(M5)" />
+          <macro name="M6" value="$(M6)" />
+          <macro name="M7" value="$(M7)" />
+          <macro name="M8" value="$(M8)" />
+        </macros>
+        <mode>1</mode>
+        <description>Galil more</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>414</x>
+    <y>70</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="TITLE" value="Time_per_element" />
+          <macro name="Y" value="$(P)$(R)Times" />
+        </macros>
+        <mode>1</mode>
+        <description>Time per element</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>346</x>
+    <y>74</y>
+    <width>90</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Plot time</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>346</x>
+    <y>50</y>
+    <width>70</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Current</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>342</x>
+    <y>193</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Then every:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>414</x>
+    <y>190</y>
+    <width>75</width>
+    <height>20</height>
+    <pv_name>$(P)OC2INCR_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>342</x>
+    <y>154</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Then every:</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>414</x>
+    <y>150</y>
+    <width>75</width>
+    <height>20</height>
+    <pv_name>$(P)OC1INCR_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>414</x>
+    <y>50</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)CurrentPoint</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>490</x>
+    <y>193</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>(EGU)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>490</x>
+    <y>154</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>(EGU)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>97</x>
+    <y>232</y>
+    <width>425</width>
+    <height>13</height>
+    <pv_name>$(P)OCMESSAGE_MON</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="212" green="219" blue="157" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>233</y>
+    <width>70</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Message</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>158</x>
+    <y>190</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)OC2START_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>158</x>
+    <y>170</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)OC2AXIS_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>244</x>
+    <y>193</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>(EGU)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>244</x>
+    <y>175</y>
+    <width>25</width>
+    <height>13</height>
+    <pv_name>$(P)OC2AXIS_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>244</x>
+    <y>154</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>(EGU)</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>158</x>
+    <y>150</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)OC1START_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>158</x>
+    <y>132</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)OC1AXIS_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>244</x>
+    <y>136</y>
+    <width>25</width>
+    <height>13</height>
+    <pv_name>$(P)OC1AXIS_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>158</x>
+    <y>111</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)FixedTime</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>158</x>
+    <y>91</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)TimeMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>277</x>
+    <y>136</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Servo only</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>278</x>
+    <y>175</y>
+    <width>30</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Servo only</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>4</x>
+    <y>493</y>
+    <width>524</width>
+    <height>200</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>40</x>
+    <y>527</y>
+    <width>50</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Build</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>96</x>
+    <y>527</y>
+    <width>96</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text>Build</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)Build</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>201</x>
+    <y>527</y>
+    <width>103</width>
+    <height>16</height>
+    <pv_name>$(P)$(R)BuildState</pv_name>
+    <foreground_color>
+      <color red="153" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="45" green="45" blue="45" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>201</x>
+    <y>602</y>
+    <width>103</width>
+    <height>16</height>
+    <pv_name>$(P)$(R)ExecuteState</pv_name>
+    <foreground_color>
+      <color red="153" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="0" green="0" blue="0" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>315</x>
+    <y>527</y>
+    <width>103</width>
+    <height>16</height>
+    <pv_name>$(P)$(R)BuildStatus</pv_name>
+    <foreground_color>
+      <color red="153" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="0" green="0" blue="0" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>315</x>
+    <y>602</y>
+    <width>103</width>
+    <height>16</height>
+    <pv_name>$(P)$(R)ExecuteStatus</pv_name>
+    <foreground_color>
+      <color red="153" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="0" green="0" blue="0" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>109</x>
+    <y>502</y>
+    <width>70</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Command</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>227</x>
+    <y>502</y>
+    <width>50</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>State</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>336</x>
+    <y>502</y>
+    <width>60</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Status</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>422</x>
+    <y>592</y>
+    <width>100</width>
+    <height>30</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="253" green="0" blue="0" />
+    </background_color>
+    <text>Abort!</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)Abort</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)Abort</pv_name>
+        <value>0</value>
+        <description>Release</description>
+      </action>
+    </actions>
+    <toggle_button>true</toggle_button>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>20</x>
+    <y>627</y>
+    <width>70</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Message</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>11</x>
+    <y>643</y>
+    <width>512</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)ExecuteMessage</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="212" green="219" blue="157" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>20</x>
+    <y>602</y>
+    <width>70</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Execute</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>96</x>
+    <y>602</y>
+    <width>96</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <text>Execute</text>
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>$(P)$(R)Execute</pv_name>
+        <value>1</value>
+        <description>Press</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>11</x>
+    <y>569</y>
+    <width>512</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)BuildMessage</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="212" green="219" blue="157" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>20</x>
+    <y>552</y>
+    <width>70</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Message</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>4</x>
+    <y>258</y>
+    <width>524</width>
+    <height>230</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="0" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>130</x>
+    <y>262</y>
+    <width>100</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Move axis?</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>311</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M2UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>336</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M3UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>286</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M1UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>361</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M4UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>386</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M5UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>411</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M6UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>436</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M7UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>129</x>
+    <y>461</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M8UseAxis</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>286</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M1MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>311</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M2MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>336</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M3MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>361</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M4MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>386</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M5MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>411</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M6MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>436</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M7MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>221</x>
+    <y>461</y>
+    <width>90</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)M8MoveMode</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>230</x>
+    <y>263</y>
+    <width>100</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Move mode</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>286</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M1).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>311</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M2).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>336</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M3).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>361</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M4).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>386</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M5).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>411</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M6).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>436</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M7).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>296</x>
+    <y>461</y>
+    <width>103</width>
+    <height>13</height>
+    <pv_name>$(P)$(M8).RBV</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>321</x>
+    <y>262</y>
+    <width>100</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Current Pos.</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>415</x>
+    <y>262</y>
+    <width>50</width>
+    <height>16</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Plots</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>461</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M8).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>436</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M7).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>411</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M6).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>386</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M5).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>361</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M4).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>15</x>
+    <y>336</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M3).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>16</x>
+    <y>311</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M2).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>16</x>
+    <y>286</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(M1).DESC</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0.0">
+    <x>158</x>
+    <y>49</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)NumPoints</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>52</y>
+    <width>160</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text># Profile points</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>12</x>
+    <y>73</y>
+    <width>160</width>
+    <height>13</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Profile type</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>158</x>
+    <y>70</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(R)PROFILETYPE_CMD</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>244</x>
+    <y>74</y>
+    <width>100</width>
+    <height>13</height>
+    <pv_name>$(P)$(R)PROFILETYPE_STATUS</pv_name>
+    <foreground_color>
+      <color red="10" green="0" blue="184" />
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>311</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M2)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M2Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M2)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M2CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M2)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M2Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M2)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M2FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>286</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M1)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M1Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M1)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M1CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M1)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M1Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M1)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M1FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>361</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M4)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M4Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M4)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M4CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M4)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M4Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M4)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M4FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>336</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M3)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M3Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M3)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M3CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M3)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M3Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M3)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M3FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>410</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M6)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M6Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M6)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M6CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M6)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M6Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M6)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M6FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>385</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M5)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M5Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M5)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M5CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M5)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M5Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M5)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M5FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>460</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M8)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M8Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M8)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M8CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M8)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M8Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M8)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M8FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <x>414</x>
+    <y>435</y>
+    <width>75</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="115" green="223" blue="255" />
+    </background_color>
+    <label />
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M7)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M7Positions" />
+        </macros>
+        <mode>1</mode>
+        <description>Output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M7)" />
+          <macro name="TITLE" value="Output_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M7CalculatedPositions" />
+        </macros>
+        <mode>1</mode>
+        <description>Calculated output</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M7)" />
+          <macro name="TITLE" value="Actual_Trajectory" />
+          <macro name="Y" value="$(P)$(R)M7Readbacks" />
+        </macros>
+        <mode>1</mode>
+        <description>Readback</description>
+      </action>
+      <action type="OPEN_DISPLAY">
+        <path>trajectoryPlot.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="M" value="$(P)$(M7)" />
+          <macro name="TITLE" value="Following_Error" />
+          <macro name="Y" value="$(P)$(R)M7FollowingErrors" />
+        </macros>
+        <mode>1</mode>
+        <description>Following error</description>
+      </action>
+    </actions>
+  </widget>
+</display>

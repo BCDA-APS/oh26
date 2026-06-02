@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <name>gm10_calculation_less_10</name>
+  <x>1309</x>
+  <y>643</y>
+  <width>340</width>
+  <height>170</height>
+  <background_color>
+    <color red="200" green="200" blue="200" />
+  </background_color>
+  <foreground_color>
+    <color red="0" green="0" blue="0" />
+  </foreground_color>
+  <show_grid>false</show_grid>
+  <snap_to_grid>false</snap_to_grid>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>30</x>
+    <y>0</y>
+    <width>250</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>$(P)$(DAU) Calculations</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>0</x>
+    <y>40</y>
+    <width>339</width>
+    <height>2</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0.0">
+    <x>300</x>
+    <y>0</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="26" green="115" blue="9" />
+    </background_color>
+    <text>More</text>
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>gm10_calculation_10.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <macro name="P" value="$(P)" />
+          <macro name="DAU" value="$(DAU)" />
+          <macro name="D" value="$(D)" />
+          <macro name="DN" value="$(DN)" />
+        </macros>
+        <mode>0</mode>
+        <description>More</description>
+      </action>
+    </actions>
+    <action_index>0</action_index>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>137</x>
+    <y>47</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>137</x>
+    <y>72</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>137</x>
+    <y>97</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>137</x>
+    <y>122</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>137</x>
+    <y>147</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>313</x>
+    <y>47</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>313</x>
+    <y>72</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>313</x>
+    <y>97</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>313</x>
+    <y>122</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0.0">
+    <x>313</x>
+    <y>147</y>
+    <width>20</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="251" green="243" blue="74" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="251" green="243" blue="74" />
+    </line_color>
+    <line_width>1</line_width>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>226</x>
+    <y>147</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(DN)0</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>226</x>
+    <y>122</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)9</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>226</x>
+    <y>97</y>
+    <width>81</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)8</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>226</x>
+    <y>72</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)7</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>226</x>
+    <y>47</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)6</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>224</x>
+    <y>45</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)6:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>224</x>
+    <y>70</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)7:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>224</x>
+    <y>95</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)8:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>224</x>
+    <y>120</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)9:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>224</x>
+    <y>145</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(DN)0:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>147</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)5</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>122</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)4</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>97</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)3</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>72</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)2</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>47</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)1</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>50</x>
+    <y>45</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)1:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>50</x>
+    <y>70</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)2:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>50</x>
+    <y>120</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)4:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>50</x>
+    <y>95</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)3:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <x>52</x>
+    <y>97</y>
+    <width>80</width>
+    <height>20</height>
+    <pv_name>$(P)$(DAU):A$(D)3</pv_name>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <background_color>
+      <color red="153" green="255" blue="255" />
+    </background_color>
+    <show_units>false</show_units>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
+    <x>50</x>
+    <y>145</y>
+    <width>84</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="253" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <line_color>
+      <color red="253" green="0" blue="0" />
+    </line_color>
+    <line_width>2</line_width>
+    <line_style>0</line_style>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):A$(D)5:ValStatus</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>47</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)1</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>72</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)2</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>97</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)3</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>122</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)4</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>5</x>
+    <y>147</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)5</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>178</x>
+    <y>47</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)6</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>178</x>
+    <y>72</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)7</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>178</x>
+    <y>97</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)8</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>178</x>
+    <y>122</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(D)9</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>178</x>
+    <y>147</y>
+    <width>40</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>A$(DN)0</text>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>75</x>
+    <y>20</y>
+    <width>160</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="222" green="19" blue="9" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Computation Off</text>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):Computation</pv>
+        </pvs>
+        <exp bool_exp="pv0!=0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0!=0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <x>75</x>
+    <y>20</y>
+    <width>160</width>
+    <height>20</height>
+    <foreground_color>
+      <color red="0" green="216" blue="0" />
+    </foreground_color>
+    <transparent>true</transparent>
+    <text>Computation On</text>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <pvs>
+          <pv trig="true">$(P)$(DAU):Computation</pv>
+        </pvs>
+        <exp bool_exp="pv0==0">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="!(pv0==0)">
+          <value>false</value>
+        </exp>
+      </rule>
+    </rules>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Polyline" version="1.0.0">
+    <x>165</x>
+    <y>40</y>
+    <width>2</width>
+    <height>129</height>
+    <foreground_color>
+      <color red="52" green="51" blue="134" />
+    </foreground_color>
+    <line_width>2</line_width>
+  </widget>
+</display>
