@@ -8,9 +8,9 @@ epicsEnvSet("IOCSH_PS1", "$(IOC)> ")
 epicsEnvSet("PREFIX", "oh26:")
 
 #For devIocStats
-epicsEnvSet("ENGINEER", "engineer")
+epicsEnvSet("ENGINEER", "nmarks")
 epicsEnvSet("LOCATION", "$(HOSTNAME=location)")
-epicsEnvSet("GROUP", "group")
+epicsEnvSet("GROUP", "BC")
 
 # search path for database files
 epicsEnvSet("EPICS_DB_INCLUDE_PATH", ".")
