@@ -93,6 +93,11 @@ ifdef ASYN
   $(PROD_NAME)_LIBS := asyn $($(PROD_NAME)_LIBS)
 endif
 
+ifdef URROBOT
+  $(DBD_NAME)_DBD += urRobotSupport.dbd
+  $(PROD_NAME)_LIBS := urRobot $($(PROD_NAME)_LIBS)
+endif
+
 ifdef STD
   $(DBD_NAME)_DBD += stdSupport.dbd
   $(PROD_NAME)_LIBS := std $($(PROD_NAME)_LIBS)

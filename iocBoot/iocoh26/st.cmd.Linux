@@ -15,7 +15,18 @@ iocoh26Linux_registerRecordDeviceDriver(pdbbase)
 < autosave.iocsh
 < common.iocsh
 
+# AMCI controller for rotation stage
 < iocsh/motors.iocsh
+
+## Robot
+# Enables debugging messages from UR Robot support
+epicsEnvSet("SPDLOG_LEVEL","debug,mylogger=trace")
+# Load urRobot iocsh script with the IP address for your robot
+iocshLoad("iocsh/urRobot.iocsh", "IP=192.168.101.42,PREFIX=$(PREFIX)UR:")
+# Load support for waypoints and paths
+iocshLoad("$(URROBOT)/urRobotApp/iocsh/paths.iocsh", "PREFIX=$(PREFIX)UR:")
+# ADURL support for wrist camera
+iocshLoad("iocsh/wrist_cam.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,YSIZE=480,COLORS=3")
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")

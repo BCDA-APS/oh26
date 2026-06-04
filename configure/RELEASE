@@ -26,13 +26,15 @@
 ##############################################################################
 
 # Define the path to the synApps support directory and uncomment.
-SUPPORT=/APSshare/epics/synApps_6_3/support
-EPICS_BASE=/APSshare/epics/base-7.0.8
+SUPPORT=/home/beams/NMARKS/devel/open-house/support
+EPICS_BASE=/home/beams/NMARKS/devel/open-house/base-7.0.10
 
 # Specify the standard synApps configuration.
 -include $(SUPPORT)/configure/RELEASE
 
 # Include any non-standard support
+URROBOT = $(SUPPORT)/urRobot-git
+ADURL = $(AREA_DETECTOR)/ADURL
 #TDS3000 = $(SUPPORT)/../nonSynAppsSupport/tds3000-2.4
 #FLY = $(SUPPORT)/../nonSynAppsSupport/fly-0-0
 
