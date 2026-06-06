@@ -15,18 +15,26 @@ iocoh26Linux_registerRecordDeviceDriver(pdbbase)
 < autosave.iocsh
 < common.iocsh
 
-# AMCI controller for rotation stage
+## AMCI controller for rotation stage ##
 < iocsh/motors.iocsh
 
-## Robot
+
+## Robot ##
 # Enables debugging messages from UR Robot support
 epicsEnvSet("SPDLOG_LEVEL","debug,mylogger=trace")
-# Load urRobot iocsh script with the IP address for your robot
+
+# Loads robot support
 iocshLoad("iocsh/urRobot.iocsh", "IP=192.168.101.42,PREFIX=$(PREFIX)UR:")
+
 # Load support for waypoints and paths
 iocshLoad("$(URROBOT)/urRobotApp/iocsh/paths.iocsh", "PREFIX=$(PREFIX)UR:")
+
 # ADURL support for wrist camera
-iocshLoad("iocsh/wrist_cam.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,YSIZE=480,COLORS=3")
+iocshLoad("iocsh/ADURL.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,YSIZE=480,COLORS=3")
+# afterIocRunning('dbpf oh26:UR:wristcam:URL1 "http://192.168.101.42:4242/current.jpg?type=color"')
+# afterIocRunning('dbpf oh26:UR:wristcam:URL2 "http://192.168.101.42:4242/current.jpg?type=edges"')
+# afterIocRunning('dbpf oh26:UR:wristcam:URL3 "http://192.168.101.42:4242/current.jpg?type=magnitude"')
+# afterIocRunning('dbpf oh26:UR:wristcam:URL4 "http://192.168.101.42:4242/current.jpg?type=annotations"')
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")
