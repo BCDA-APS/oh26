@@ -6,22 +6,25 @@ script_dir=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 cd "$script_dir" || exit
 
 # Define paths to display manager binaries
-CAQTDM=/APSshare/bin/caQtDM
-MEDM=/APSshare/epics/extensions/bin/linux-x86_64/medm
+# CAQTDM=/APSshare/bin/caQtDM
+MEDM=medm
 
 # Display manager to use
-DM="${1:-caqtdm}"
+# DM="${1:-caqtdm}"
+DM="medm"
+
+SUPPORT="/home/nmarks/open-house/support"
 
 # Path to the URROBOT support module
-URROBOT_PATH="/home/beams0/NMARKS/devel/open-house/support/urRobot-git"
+URROBOT_PATH="${SUPPORT}/urRobot-master"
 
 # IOC prefix
 PREFIX="oh26:UR:"
 
 # Some screens are used from the calc module
-CALC=/APSshare/epics/synApps_6_3/support/calc-R3-7-5
+CALC=${SUPPORT}/calc-master
 # If using Robotiq wrist camera, need areaDetector
-AREA_DETECTOR="/APSshare/epics/synApps_6_3/support/areaDetector-R3-14"
+AREA_DETECTOR="${SUPPORT}/areaDetector-master"
 
 ####################################################
 
