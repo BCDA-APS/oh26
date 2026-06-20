@@ -5,11 +5,15 @@
 # Increase size of buffer for error logging from default 1256
 errlogInit(20000)
 
+# callbackSetQueueSize(2000)
+
 ################################################################################
 # Tell EPICS all about the record types, device-support modules, drivers,
 # etc. in the software we just loaded (oh26.munch)
 dbLoadDatabase("../../dbd/iocoh26Linux.dbd")
 iocoh26Linux_registerRecordDeviceDriver(pdbbase)
+
+# scanOnceSetQueueSize(2000)
 
 < settings.iocsh
 < autosave.iocsh
@@ -31,10 +35,9 @@ iocshLoad("$(URROBOT)/urRobotApp/iocsh/paths.iocsh", "PREFIX=$(PREFIX)UR:")
 
 # ADURL support for wrist camera
 iocshLoad("iocsh/ADURL.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,YSIZE=480,COLORS=3")
-# afterIocRunning('dbpf oh26:UR:wristcam:URL1 "http://192.168.101.42:4242/current.jpg?type=color"')
-# afterIocRunning('dbpf oh26:UR:wristcam:URL2 "http://192.168.101.42:4242/current.jpg?type=edges"')
-# afterIocRunning('dbpf oh26:UR:wristcam:URL3 "http://192.168.101.42:4242/current.jpg?type=magnitude"')
-# afterIocRunning('dbpf oh26:UR:wristcam:URL4 "http://192.168.101.42:4242/current.jpg?type=annotations"')
+
+# Extra stuff for the robot support
+dbLoadRecords("ur_extra.db", "P=$(PREFIX)")
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")
