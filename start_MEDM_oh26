@@ -22,4 +22,9 @@ export START_PUTRECORDER=${EPICS_APP}/start_putrecorder
 export MACROS_PY=${EPICS_APP_ADL_DIR}/../python/macros.py
 export EDITOR=nedit
 
+# We have multiple network interfaces so we need
+# to do this to avoid "Identical Process Variable names on Multiple Servers" errors
+export EPICS_CA_AUTO_ADDR_LIST=NO
+export EPICS_CA_ADDR_LIST="127.0.0.1"
+
 medm -macro ${UI_FILE_MACROS} -x ${DEFAULT_UI_FILE} &
