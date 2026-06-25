@@ -1,7 +1,0 @@
-record(seq, "$(P)UR:ClearFault") {
-    field(DOL0, 1)
-    field(LNK0, "$(P)UR:Dashboard:UnlockProtectiveStop.PROC")
-    field(DLY1, 1.0)
-    field(DOL1, 1)
-    field(LNK1, "$(P)UR:Control:ReuploadControlScript.PROC")
-}

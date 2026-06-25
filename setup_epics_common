@@ -29,7 +29,7 @@ function addModule
 	if [ "$2" != "${DISPLAY_MANAGER}" ]; then
 		return 0
 	fi
-	
+
     if [ "" != "${module}" ]; then
         # module is required
         addition=${module_path}
@@ -51,7 +51,7 @@ function addModule
 
 
 #######################################
-# get environment variables for support modules 
+# get environment variables for support modules
 
 output=`perl -s $EPICS_APP/release.pl -form=bash  $EPICS_APP`
 eval $output
@@ -60,9 +60,11 @@ eval $output
 # ========  ================     ===============          ===========================
 # function  MODULE_VARIABLE      Display Manager          subdirectory with .ui files
 # ========  ================     ===============          ===========================
-addModule   EPICS_APP_ADL_DIR    medm                     
-addModule   EPICS_APP_UI_DIR     caqtdm                   
+addModule   EPICS_APP_ADL_DIR    medm
+addModule   EPICS_APP_UI_DIR     caqtdm
 addModule   EPICS_APP_UI_DIR     caqtdm                   /autoconvert
+
+addModule   URROBOT              medm                     /urRobotApp/op/adl
 
 addModule   ALIVE                medm                     /aliveApp/op/adl
 addModule   ALIVE                caqtdm                   /aliveApp/op/ui

@@ -36,8 +36,9 @@ iocshLoad("$(URROBOT)/urRobotApp/iocsh/paths.iocsh", "PREFIX=$(PREFIX)UR:")
 # ADURL support for wrist camera
 iocshLoad("iocsh/ADURL.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,YSIZE=480,COLORS=3")
 
-# Extra stuff for the robot support
-dbLoadRecords("ur_extra.db", "P=$(PREFIX)")
+
+# Extra stuff
+dbLoadRecords("oh_extra.db", "P=$(PREFIX)")
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")
