@@ -12,15 +12,7 @@ then
     export MEDM_EXEC_LIST='Probe;probe &P &'
 fi
 
-#export EPICS_CA_ADDR_LIST="164.54.53.126"
-
-# This should agree with the environment variable set by the ioc
-# see 'putenv "EPICS_CA_MAX_ARRAY_BYTES=64008"' in iocBoot/ioc<target>/st.cmd
-export EPICS_CA_MAX_ARRAY_BYTES=64008
-
-export START_PUTRECORDER=${EPICS_APP}/start_putrecorder
-export MACROS_PY=${EPICS_APP_ADL_DIR}/../python/macros.py
-export EDITOR=nedit
+export EPICS_CA_MAX_ARRAY_BYTES=64010
 
 # We have multiple network interfaces so we need
 # to do this to avoid "Identical Process Variable names on Multiple Servers" errors
