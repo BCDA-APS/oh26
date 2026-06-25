@@ -30,3 +30,10 @@ record(seq, "$(P)StartScan") {
     field(DOL2, 1)
     field(LNK2, "$(P)scan1.EXSC")
 }
+
+record(calcout, "$(P)UR:disable_move_cam_to_sample_") {
+    field(INPA, "$(P)UR:WaypointJ:$(WPJ_HOME):Reached CP")
+    field(CALC, "A")
+    field(OOPT, "On Change")
+    field(OUT, "$(P)UR:WaypointJ:$(WPJ_CAM_SAMPLE):Enabled.VAL PP")
+}

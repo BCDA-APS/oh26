@@ -38,7 +38,7 @@ iocshLoad("iocsh/ADURL.iocsh", "PREFIX=$(PREFIX)UR:,INSTANCE=wristcam,XSIZE=640,
 
 
 # Extra stuff
-dbLoadRecords("oh_extra.db", "P=$(PREFIX)")
+dbLoadRecords("oh_extra.db", "P=$(PREFIX),WPJ_HOME=2,WPJ_CAM_SAMPLE=1")
 
 #- devIocStats
 dbLoadRecords("$(DEVIOCSTATS)/db/iocAdminSoft.db","IOC=$(PREFIX)")
@@ -48,6 +48,9 @@ dbLoadRecords("$(TOP)/oh26App/Db/iocAdminSoft_aliases.db","P=$(PREFIX)")
 ###############################################################################
 iocInit
 ###############################################################################
+dbpf oh26:UR:ActionDoneCalc1.INPA$ "oh26:UR:RobotiqGripper:IsStoppedOuter CP NMS"
+dbpf oh26:UR:ActionDoneCalc2.INPB$ "oh26:UR:RobotiqGripper:IsStoppedInner CP NMS"
+
 
 # write all the PV names to a local file
 dbl > dbl-all.txt
